@@ -1,0 +1,53 @@
+{
+    "name": "ruerdev/laravel-last-seen",
+    "description": "Adds last seen functionality to Laravel models",
+    "keywords": [
+        "ruerdev",
+        "laravel-last-seen"
+    ],
+    "homepage": "https://github.com/ruerdev/laravel-last-seen",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rutger Broerze",
+            "email": "contact@ruer.nl",
+            "homepage": "https://ruer.nl"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/contracts": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.3",
+        "vimeo/psalm": "^3.11"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ruerdev\\LaravelLastSeen\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ruerdev\\LaravelLastSeen\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "psalm": "vendor/bin/psalm",
+        "test": "vendor/bin/phpunit --colors=always",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ruerdev\\LaravelLastSeen\\LaravelLastSeenServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
